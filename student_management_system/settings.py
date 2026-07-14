@@ -84,7 +84,9 @@ DATABASES = {
     }
 }
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://student-management-system-zluh.onrender.com/",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
