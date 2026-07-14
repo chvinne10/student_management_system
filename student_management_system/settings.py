@@ -23,7 +23,7 @@ environ.Env.read_env(BASE_DIR / ".env")
 SECRET_KEY = env("SECRET_KEY")
 DEBUG = env.bool("DEBUG")
 
-ALLOWED_HOSTS = ['https://student-management-system-zluh.onrender.com/','localhost']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
