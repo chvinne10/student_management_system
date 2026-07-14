@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#f3f5f7;
+
+}
+
+.container{
+
+width:380px;
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+text-align:center;
+margin-bottom:25px;
+
+}
+
+input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+
+}
+
+button{
+
+width:100%;
+padding:12px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:8px;
+margin-top:15px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#0069d9;
+
+}
+#waring-tag{
+    text-align:center;
+    color:red;
+    margin-bottom:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+<h1>Student Login</h1>
+<div id="waring-tag">
+{%if status %}
+<script>alert("{{ status }}")</script>
+{% endif %}
+</div>
+<form action="{% url 'login' %}" method="POST">
+
+{% csrf_token %}
+
+<input type="text" name="email" placeholder="Email">
+
+<input type="text" name="password" placeholder="Password">
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

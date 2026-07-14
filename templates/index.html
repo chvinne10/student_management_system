@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#eef2f5;
+
+}
+
+.container{
+
+width:450px;
+background:white;
+padding:40px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+margin-bottom:30px;
+
+}
+
+button{
+
+padding:12px 30px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+margin:10px;
+
+}
+
+.register{
+
+background:#28a745;
+color:white;
+
+}
+
+.login{
+
+background:#007BFF;
+color:white;
+
+}
+
+button:hover{
+
+opacity:.9;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Management System</h1>
+
+<a href="{% url 'register' %}">
+
+<button class="register">Register</button>
+
+</a>
+
+<a href="{% url 'login' %}">
+
+<button class="login">Login</button>
+
+</a>
+
+</div>
+
+</body>
+</html>
